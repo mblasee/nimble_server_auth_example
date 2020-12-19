@@ -7,7 +7,7 @@ void setup(void)
     Serial.println("Starting NimBLE Server");
     NimBLEDevice::init("NimBLE");
 
-    NimBLEDevice::setSecurityAuth(true, false, true);
+    NimBLEDevice::setSecurityAuth(true, true, true);
     NimBLEDevice::setSecurityPasskey(123356);
     NimBLEServer *pServer = NimBLEDevice::createServer();
     NimBLEService *pService = pServer->createService("ABCD");
