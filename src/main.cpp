@@ -9,6 +9,7 @@ void setup(void)
 
     NimBLEDevice::setSecurityAuth(true, true, true);
     NimBLEDevice::setSecurityPasskey(123356);
+    NimBLEDevice::setSecurityIOCap(BLE_HS_IO_DISPLAY_ONLY);
     NimBLEServer *pServer = NimBLEDevice::createServer();
     NimBLEService *pService = pServer->createService("ABCD");
     NimBLECharacteristic *pCharacteristic = pService->createCharacteristic("1234", NIMBLE_PROPERTY::READ | NIMBLE_PROPERTY::READ_ENC);
